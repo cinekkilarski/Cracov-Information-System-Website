@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Cracov-Information-System-Client/static/css/main.d487bdee.chunk.css",
-    "main.js": "/Cracov-Information-System-Client/static/js/main.f7bcfe98.chunk.js",
-    "main.js.map": "/Cracov-Information-System-Client/static/js/main.f7bcfe98.chunk.js.map",
+    "main.js": "/Cracov-Information-System-Client/static/js/main.57a70cef.chunk.js",
+    "main.js.map": "/Cracov-Information-System-Client/static/js/main.57a70cef.chunk.js.map",
     "runtime-main.js": "/Cracov-Information-System-Client/static/js/runtime-main.73911d6e.js",
     "runtime-main.js.map": "/Cracov-Information-System-Client/static/js/runtime-main.73911d6e.js.map",
     "static/css/2.74189dbb.chunk.css": "/Cracov-Information-System-Client/static/css/2.74189dbb.chunk.css",
     "static/js/2.3345b959.chunk.js": "/Cracov-Information-System-Client/static/js/2.3345b959.chunk.js",
     "static/js/2.3345b959.chunk.js.map": "/Cracov-Information-System-Client/static/js/2.3345b959.chunk.js.map",
     "index.html": "/Cracov-Information-System-Client/index.html",
-    "precache-manifest.ff3120081f6ad80655ac0571771d028f.js": "/Cracov-Information-System-Client/precache-manifest.ff3120081f6ad80655ac0571771d028f.js",
+    "precache-manifest.506a79db27541f0794ccf0f23525b9e8.js": "/Cracov-Information-System-Client/precache-manifest.506a79db27541f0794ccf0f23525b9e8.js",
     "service-worker.js": "/Cracov-Information-System-Client/service-worker.js",
     "static/css/2.74189dbb.chunk.css.map": "/Cracov-Information-System-Client/static/css/2.74189dbb.chunk.css.map",
     "static/css/main.d487bdee.chunk.css.map": "/Cracov-Information-System-Client/static/css/main.d487bdee.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.74189dbb.chunk.css",
     "static/js/2.3345b959.chunk.js",
     "static/css/main.d487bdee.chunk.css",
-    "static/js/main.f7bcfe98.chunk.js"
+    "static/js/main.57a70cef.chunk.js"
   ]
 }
