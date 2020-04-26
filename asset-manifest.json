@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Cracov-Information-System-Client/static/css/main.d487bdee.chunk.css",
+    "main.js": "/Cracov-Information-System-Client/static/js/main.f7bcfe98.chunk.js",
+    "main.js.map": "/Cracov-Information-System-Client/static/js/main.f7bcfe98.chunk.js.map",
+    "runtime-main.js": "/Cracov-Information-System-Client/static/js/runtime-main.73911d6e.js",
+    "runtime-main.js.map": "/Cracov-Information-System-Client/static/js/runtime-main.73911d6e.js.map",
+    "static/css/2.74189dbb.chunk.css": "/Cracov-Information-System-Client/static/css/2.74189dbb.chunk.css",
+    "static/js/2.3345b959.chunk.js": "/Cracov-Information-System-Client/static/js/2.3345b959.chunk.js",
+    "static/js/2.3345b959.chunk.js.map": "/Cracov-Information-System-Client/static/js/2.3345b959.chunk.js.map",
+    "index.html": "/Cracov-Information-System-Client/index.html",
+    "precache-manifest.ff3120081f6ad80655ac0571771d028f.js": "/Cracov-Information-System-Client/precache-manifest.ff3120081f6ad80655ac0571771d028f.js",
+    "service-worker.js": "/Cracov-Information-System-Client/service-worker.js",
+    "static/css/2.74189dbb.chunk.css.map": "/Cracov-Information-System-Client/static/css/2.74189dbb.chunk.css.map",
+    "static/css/main.d487bdee.chunk.css.map": "/Cracov-Information-System-Client/static/css/main.d487bdee.chunk.css.map",
+    "static/js/2.3345b959.chunk.js.LICENSE.txt": "/Cracov-Information-System-Client/static/js/2.3345b959.chunk.js.LICENSE.txt",
+    "static/media/krakow_header_1.jpg": "/Cracov-Information-System-Client/static/media/krakow_header_1.4337ef97.jpg",
+    "static/media/krakow_header_2.jpg": "/Cracov-Information-System-Client/static/media/krakow_header_2.e7d249f0.jpg",
+    "static/media/krakow_header_3.jpg": "/Cracov-Information-System-Client/static/media/krakow_header_3.9d63a101.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.73911d6e.js",
+    "static/css/2.74189dbb.chunk.css",
+    "static/js/2.3345b959.chunk.js",
+    "static/css/main.d487bdee.chunk.css",
+    "static/js/main.f7bcfe98.chunk.js"
+  ]
+}
