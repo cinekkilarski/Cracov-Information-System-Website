@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bd517d03fe4f5dbc11aa2241a36503db",
+    "revision": "e649e0f3f43592cdd52435b86ddd4a8f",
     "url": "/Cracov-Information-System-Client/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Cracov-Information-System-Client/static/css/2.74189dbb.chunk.css"
   },
   {
-    "revision": "2d3f240c670b647cbc1d",
+    "revision": "e16c2c2853aeb418153d",
     "url": "/Cracov-Information-System-Client/static/css/main.d487bdee.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Cracov-Information-System-Client/static/js/2.3345b959.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2d3f240c670b647cbc1d",
-    "url": "/Cracov-Information-System-Client/static/js/main.496fbba4.chunk.js"
+    "revision": "e16c2c2853aeb418153d",
+    "url": "/Cracov-Information-System-Client/static/js/main.27ad4b3e.chunk.js"
   },
   {
     "revision": "a0dc889f64ed8a44c212",
