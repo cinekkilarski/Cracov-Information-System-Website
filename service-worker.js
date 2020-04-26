@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Cracov-Information-System-Client/precache-manifest.c956c7084671b3f2670e79fa2f7d9dd3.js"
+  "/Cracov-Information-System-Client/precache-manifest.506a79db27541f0794ccf0f23525b9e8.js"
 );
 
 self.addEventListener('message', (event) => {
