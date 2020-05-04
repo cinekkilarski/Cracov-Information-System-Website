@@ -1,0 +1,105 @@
+
+.navbar {
+  transition: all 0.4s;
+}
+
+.navbar .navbar-collapse .nav-link {
+  color: rgb(31, 30, 30);
+  font-size: 20px;
+}
+
+.navbar .navbar-collapse .nav-link:hover {
+  color: rgb(251, 227, 227);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-size: 30px;
+}
+
+
+/* Change navbar styling on scroll */
+.navbar.active {
+  background: rgba(255, 255, 255, 0.794);
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+  color: #555;
+}
+
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+  color: #555;
+  text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+  color: #555;
+}
+
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+  .navbar {
+      background: #fff;
+  }
+
+  .navbar .navbar-brand, .navbar .nav-link {
+      color: #555;
+  }
+}
+
+.navbtn {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 0px 10px;
+  text-align: center;
+  font-size: 20px;
+  margin: 0px 6px;
+  opacity: 1;
+  transition: 0.3s;
+}
+.navbtn:hover {opacity: 0.6;
+  background-color: #555;
+  color: white;}
+ .navbtn:focus {opacity: 0.6;
+  background-color: #555;
+  color: white;}
+
+.personIcon{
+ margin-bottom: 2px;
+  color: #fff;
+}
+
+
+.dropdownBackground{
+  background-color: rgba(20, 19, 19, 0.705);
+  border-radius: 8px;
+}
+
+.dropdownToggle{
+  margin-top: 2px;
+}
+
+.dropdownItem{
+  color: #f4511e;
+  font-size: large;
+}
+
+.dropdownHeader{
+  color: antiquewhite;
+}
+
+.mainLogo{
+  margin-top: -12px;
+  margin-right: 5px;
+}
