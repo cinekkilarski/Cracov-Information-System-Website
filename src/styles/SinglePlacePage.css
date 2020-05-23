@@ -1,0 +1,188 @@
+.backgroundSingle{
+    background-image: linear-gradient(to left top, #ff6909, #fb842f, #f79c4e, #f4b06f, #f0c392);
+   width:100%;
+   min-height: 1800px;
+
+   /* to fix element, the main div shoud have realtive position */
+   position: relative;
+}
+.headerClass{
+    position: fixed;
+    position: relative;
+    height: 350px;
+    background-image: linear-gradient(#ff9d2f, #ff6126);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 5vw)
+    );
+    width: 100%;
+    /* change the calc height to a percentage height to get alternate responsive behavior*/
+  }
+  
+  h1 {
+    margin: 0;
+    padding: 100px 0;
+    font: 44px "Arial";
+    color: white;
+    text-align: center;
+  }
+  
+    
+  .h1Place {
+    transform: translateY(-30px);
+    text-align: center;
+   font-size: 80px;
+    padding: 100px 0;
+  }
+
+  .imgPlace{
+    width: 50%;
+      border-radius: 15px;
+   height: 550px;
+    position: relative;
+    z-index: 2;
+      float:right;
+      margin-right: 30px;
+      margin-top: 50px;
+      padding-left: 0px;
+  }
+
+  .textFormat{
+    text-align: justify;
+    font-size: 30px;
+    display: block;
+    width: 50%;
+    position: relative;
+    z-index: 2;
+      float:right;
+     height: auto;
+    margin-top: 30px;
+    margin-right: 30px;
+      background-color: rgba(0, 0, 0, 0.301);
+      color: blanchedalmond;
+      min-height: 486px;
+  }
+
+
+  .mainPlaceDataContainer{
+    transform: translateY(-150px);
+    height: 860px;
+    width: 44%;
+    float: left;
+    position: relative;
+     z-index: 3;
+    /* background-color: rgba(25, 194, 89, 0.301); */
+  margin-left: 2%;
+  
+  }
+
+
+  .rateCss{
+    margin-left:0;
+     height: 100px;
+     width: 100%;
+     float: left;
+     position: relative;
+      z-index: 3;
+     background-color: rgba(87, 64, 38, 0.87);
+
+   }
+
+  .commentCss{
+   margin-left:0;
+    height: 800px;
+    width: 100%;
+    float: left;
+    position: relative;
+     z-index: 3;
+    background-color: rgba(0, 0, 0, 0.301);
+  
+  }
+
+.mapContainer{
+  background-color: rgba(240, 16, 16, 0.746);
+  height:600px;
+  width: 100%;
+ 
+}
+
+.mapPanel{
+  background-color: rgba(0, 0, 0, 0.301);
+  float: left;
+  height: 600px;
+  width: 100%;
+  /* fixed to the end of main div */
+  position:absolute; 
+      bottom: 0;
+}
+
+.findSthPanel{
+  float: left;
+}
+
+.mapPanel input{
+  background-color:rgb(246, 243, 226);
+  width: 90%;
+}
+
+textarea {
+  margin-top: 10px;
+  margin-left: 4px;
+  width: 99%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f1ebebb4;
+  resize: none;
+  color: #0c0b0b;
+}
+
+.addCommentCss{
+  position:absolute; 
+  bottom: 0;
+  width: 100%;
+  display: block;
+}
+
+#addButton{
+  float: right;
+  width: auto;
+  padding: 3px 20px;
+  background-color:  #f44336;
+border: none;
+  color: #0c0b0b;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+ 
+}
+
+.modalStyle{
+  background-color: #fafaeb;
+  text-align: center; 
+  border-radius: 5px;
+  margin: 0 auto;
+
+}
+
+#singleAddress{
+  /* background-color: rgba(172, 255, 47, 0.24); */
+  width: 70%;
+  height: 100%;
+color: rgb(255, 252, 226);
+
+font-size: 24px;
+margin-top: 12px;
+margin-left: 40px;
+}
+
+
+#somehistorytext{
+margin: 10px;
+font-size:1.4vw;
+}

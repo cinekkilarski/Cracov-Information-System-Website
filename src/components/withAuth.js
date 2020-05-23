@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-
+import Cookies from 'js-cookie'
 export default function withAuth(ComponentToProtect) {
     return class extends Component {
         constructor() {
@@ -16,7 +16,7 @@ export default function withAuth(ComponentToProtect) {
             fetch('http://localhost:8080/api/auth/checkToken', {
                 headers: {
                     "Content-type": "application/json; charset=UTF-8",
-                    Authorization: "Bearer " + localStorage.getItem('token')
+                    Authorization: "Bearer " + Cookies.get('token')
                 }
             }
             )

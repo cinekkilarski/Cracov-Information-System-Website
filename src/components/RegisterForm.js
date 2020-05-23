@@ -166,8 +166,8 @@ class RegisterForm extends Component {
         const { err_email, err_pass, err_first_name_empty, err_last_name_empty, err_email_empty, err_pass_empty, err_confirm_pass_empty, err_confirm_pass } = this.state.errors
 
         return (
-            <div className="modal" >
-                <form className="modal-content animate" onSubmit={this.handleSubmit} noValidate>
+            <div className="modalLog" >
+                <form className="modalContentLog" onSubmit={this.handleSubmit} noValidate>
 
                     <div className="imgcontainer">
                         {/* <img src="" alt="Avatar" class="avatar" /> */}

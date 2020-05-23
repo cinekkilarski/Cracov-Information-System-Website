@@ -3,11 +3,12 @@ import { Alert } from 'react-bootstrap'
 import '../styles/LoginRegisterForm.css'
 import { PeopleFill } from 'react-bootstrap-icons';
 import { withRouter, Link } from "react-router-dom";
+import Cookies from 'js-cookie'
 class LoginForm extends Component {
 
     state = {
-        email: 'qwertin@gmail.com',
-        password: 'elo123',
+        email: 'example1@mail.com',
+        password: 'example1',
         errors: {
             err_email: false,//true - display error
             err_pass: false,
@@ -116,8 +117,8 @@ class LoginForm extends Component {
             }
         }).then(res => res.json()).then(res => {
             // if (res.status === 200) {
-            localStorage.setItem("token", res.token)
-            localStorage.setItem("logged", true)
+            Cookies.set("token", res.token)
+            Cookies.set("logged", true)
 
             this.props.history.push("/home");
             window.location.reload()
@@ -147,11 +148,9 @@ class LoginForm extends Component {
         const { err_email, err_pass, err_email_empty, err_pass_empty, err_invalid } = this.state.errors
         //console.log(err_pass, err_pass_empty);
         return (
-            <div className="modal" >
-                <form className="modal-content animate" onSubmit={this.handleSubmit} noValidate>
-
+            <div className="modalLog" >
+                <form className="modalContentLog" onSubmit={this.handleSubmit} noValidate>
                     <div className="imgcontainer">
-                        {/* <img src="" alt="Avatar" className="avatar" /> */}
                         < PeopleFill className="avatar" size="150px" />
                     </div>
                     {this.props.registrationSuccess && <Alert variant="success"> User created successfully. Now you can log in.</Alert>}

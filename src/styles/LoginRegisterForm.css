@@ -71,13 +71,12 @@ img.avatar {
 
 .container {
   padding: 16px;
-
 }
 
 
 
 /* The Modal (background) */
-.modal {
+.modalLog {
   display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -87,20 +86,22 @@ img.avatar {
   height: 100%; /* Full height */
   overflow: hidden;
    /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.603); /* Black w/ opacity */
+  /* background-color: rgb(0,0,0); 
+  /* background-color: rgb(0, 0, 0); */
+  background-image: linear-gradient(to right bottom, #051937, #51295c, #a03361, #da5647, #eb9612);
   padding-top: 60px;
-  z-index:10;
+  z-index:2000;
 }
 
 /* Modal Content/Box */
-.modal-content {
+.modalContentLog {
   background-color: #833434d7;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 2px solid rgb(109, 19, 11);
   border-radius: 10px;
   width: 25%; /* Could be more or less, depending on screen size */
   transform: translateY(-16%);
+  z-index: 2005;
 }
 
 /* The Close Button (x) */

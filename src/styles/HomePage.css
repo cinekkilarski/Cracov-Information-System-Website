@@ -1,0 +1,76 @@
+.iconsMainDiv{
+    /* background-color: greenyellow; */
+    min-height: 400px;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconDiv{
+    float: left;
+    width: 250px;
+    text-align: center;
+  height: 300px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.616);
+font-size: 25px;
+margin: 10px;
+}
+
+#homeicons{
+    font-size:240px;
+    color:rgb(230, 137, 17);
+    float: left;
+}
+
+#iconsHeader{
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color:blanchedalmond;
+    background-color:  rgba(116, 112, 112, 0.959);
+}
+
+#imgDiv img{
+    float: left;
+    width: 33.3333%;
+    height: 400px;
+}
+
+#dragon{
+   
+background-color: rgba(12, 14, 13, 0.657);
+height: 700px;
+width: 80%;
+margin:0 auto;
+margin-top: 60px;
+margin-bottom: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 20px;
+
+}
+
+#dragon img{
+    height: 600px;
+    float: left;
+}
+
+#dragon p{
+ float: right;
+   text-align: justify;
+   margin: 40px;
+   font-size: 37px;
+}
+
+#krakowDef{
+    background-color: rgba(224, 240, 241, 0.644);
+    float:right;
+    height: 600px;
+    width: 70%; 
+}
