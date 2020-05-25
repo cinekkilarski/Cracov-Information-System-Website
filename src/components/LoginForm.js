@@ -26,36 +26,33 @@ class LoginForm extends Component {
     }
 
     handleInputChange = (e) => {
-        const name = e.target.name;
-        //console.log(name);
-        this.setState({
-            [name]: e.target.value
-        })
+        if (!e || !e.target) return;
+        const { name, value } = e.target;
+        this.setState({ [name]: value });
     }
 
     formLoginValidation() {
+        // TODO USE TRUSTED SOLUTION OR AT LEAST REGEX; good examples here: https://www.regular-expressions.info/email.html
+        // https://www.thepolyglotdeveloper.com/2015/05/use-regex-to-test-password-strength-in-javascript/
         let email_ver = false;
         let password_ver = false;
         let email_empty_ver = false;
         let password_empty_ver = false;
         let result = false;
-        //console.log(this.state.email.length);
 
         if (this.state.email.indexOf('@') !== -1 && this.state.email.indexOf(' ') === -1 && this.state.email.length > 0) {
             email_ver = true // true = ver correct
         }
 
         if (this.state.email.length !== 0) {
-            //email_ver = true
             email_empty_ver = true
         }
 
         if (this.state.password.indexOf(' ') === -1 && this.state.password.length > 0) {
-            password_ver = true//ok
+            password_ver = true
         }
 
         if (this.state.password.length !== 0) {
-            //email_ver = true
             password_empty_ver = true
         }
 
@@ -73,11 +70,13 @@ class LoginForm extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
-        const validation_result = this.formLoginValidation()
-        //console.log(validation_result);
-        if (validation_result.result) {
-            this.handleLoginRequest()
+        if (!e) return;
+
+        e.preventDefault();
+        const { result: formIsValid, ...details } = this.formLoginValidation();
+
+        if (formIsValid) {
+            this.handleLoginRequest();
             this.setState({
                 email: '',
                 password: '',
@@ -91,10 +90,10 @@ class LoginForm extends Component {
         } else {
             this.setState({
                 errors: {
-                    err_email: !validation_result.email_ver,
-                    err_email_empty: !validation_result.email_empty_ver,
-                    err_pass: !validation_result.password_ver,
-                    err_pass_empty: !validation_result.password_empty_ver,
+                    err_email: !details.email_ver,
+                    err_email_empty: !details.email_empty_ver,
+                    err_pass: !details.password_ver,
+                    err_pass_empty: !details.password_empty_ver,
                 }
             })
         }
@@ -102,12 +101,10 @@ class LoginForm extends Component {
     }
 
     handleLoginRequest = () => {
-
         const loginData = {
             email: this.state.email,
             password: this.state.password
         }
-        console.log(JSON.stringify(loginData));
 
         fetch('http://localhost:8080/api/auth/login', {
             method: 'POST',
@@ -117,21 +114,14 @@ class LoginForm extends Component {
             }
         }).then(res => res.json()).then(res => {
             // if (res.status === 200) {
-            Cookies.set("token", res.token)
-            Cookies.set("logged", true)
+            Cookies.set("token", res.token);
+            Cookies.set("logged", true);
 
             this.props.history.push("/home");
-            window.location.reload()
+            window.location.reload();
 
-            this.props.handleLogged()
-            //     } else {
-            //         const error = new Error(res.error);
-            //         throw error;
-            //     }
-        })
-            .catch(err => {
-                this.handleUnauthorized()
-            });
+            this.props.handleLogged();
+        }).catch(err => this.handleUnauthorized());
     }
 
     handleUnauthorized = () => {
@@ -146,7 +136,6 @@ class LoginForm extends Component {
 
         const { empty_input, email_incorrect, invalid_login, password_incorrect } = this.messages
         const { err_email, err_pass, err_email_empty, err_pass_empty, err_invalid } = this.state.errors
-        //console.log(err_pass, err_pass_empty);
         return (
             <div className="modalLog" >
                 <form className="modalContentLog" onSubmit={this.handleSubmit} noValidate>

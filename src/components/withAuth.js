@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie';
+
 export default function withAuth(ComponentToProtect) {
+
     return class extends Component {
         constructor() {
             super();
@@ -12,39 +14,37 @@ export default function withAuth(ComponentToProtect) {
         }
 
         componentDidMount() {
-            //console.log(localStorage.getItem('token'));
             fetch('http://localhost:8080/api/auth/checkToken', {
                 headers: {
                     "Content-type": "application/json; charset=UTF-8",
                     Authorization: "Bearer " + Cookies.get('token')
                 }
-            }
-            )
-                .then(res => {
-                    if (res.status === 200) {
-                        this.setState({ loading: false });
-                    } else {
-                        const error = new Error(res.error);
-                        throw error;
-                    }
-                })
-                .catch(err => {
-                    console.error(err);
-                    this.setState({ loading: false, redirect: true });
-                });
+            }).then(res => {
+                if (res.status === 200) {
+                    this.setState({ loading: false });
+                } else {
+                    const error = new Error(res.error);
+                    throw error;
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                this.setState({ loading: false, redirect: true });
+            });
         }
 
 
         render() {
-
             const { loading, redirect } = this.state;
+            
             if (loading) {
                 return null;
             }
-            if (redirect) {
 
+            if (redirect) {
                 return <Redirect to="/login" />;
             }
+
             return <ComponentToProtect {...this.props} />;
         }
     }

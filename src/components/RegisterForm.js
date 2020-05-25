@@ -20,33 +20,32 @@ class RegisterForm extends Component {
             err_confirm_pass_empty: false,
             err_confirm_pass: false
         }
-    }
+    };
 
     messages = {
         email_incorrect: 'Please provide a valid email address.',
         password_incorrect: 'Cannot include spaces',
         confirm_password_incorrect: 'It is not the same.',
         empty_input: 'This field is required.',
-    }
+    };
 
     handleInputChange = (e) => {
-        const name = e.target.name;
-        //console.log(name);
-        this.setState({
-            [name]: e.target.value
-        })
+        if (!e || !e.target) return;
+        const { name, value } = e.target;
+        this.setState({ [name]: value });
     }
 
     formRegisterValidation = () => {
-        let email_ver = false
-        let password_ver = false
-        let first_name_empty_ver = false
-        let last_name_empty_ver = false
-        let email_empty_ver = false
-        let password_empty_ver = false
-        let confirm_password_empty_ver = false
-        let confirm_password_ver = false
-        let result = false
+        // same here; use 3rd party validation vs rolling own
+        let email_ver = false;
+        let password_ver = false;
+        let first_name_empty_ver = false;
+        let last_name_empty_ver = false;
+        let email_empty_ver = false;
+        let password_empty_ver = false;
+        let confirm_password_empty_ver = false;
+        let confirm_password_ver = false;
+        let result = false;
 
         if (this.state.first_name.length !== 0) {
             //email_ver = true
@@ -99,10 +98,13 @@ class RegisterForm extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
-        const validation_result = this.formRegisterValidation()
-        if (validation_result.result) {
-            this.handleRegisterRequest()
+        if (!e) return;
+
+        e.preventDefault();
+
+        const { result: isValid, ...details } = this.formRegisterValidation();
+        if (isValid) {
+            this.handleRegisterRequest();
             this.setState({
                 first_name: '',
                 last_name: '',
@@ -119,20 +121,20 @@ class RegisterForm extends Component {
                     err_confirm_pass_empty: false,
                     err_confirm_pass: false,
                 }
-            })
+            });
         } else {
             this.setState({
                 errors: {
-                    err_email: !validation_result.email_ver,
-                    err_pass: !validation_result.password_ver,
-                    err_first_name_empty: !validation_result.first_name_empty_ver,
-                    err_last_name_empty: !validation_result.last_name_empty_ver,
-                    err_email_empty: !validation_result.email_empty_ver,
-                    err_pass_empty: !validation_result.password_empty_ver,
-                    err_confirm_pass_empty: !validation_result.confirm_password_empty_ver,
-                    err_confirm_pass: !validation_result.confirm_password_ver,
+                    err_email: !details.email_ver,
+                    err_pass: !details.password_ver,
+                    err_first_name_empty: !details.first_name_empty_ver,
+                    err_last_name_empty: !details.last_name_empty_ver,
+                    err_email_empty: !details.email_empty_ver,
+                    err_pass_empty: !details.password_empty_ver,
+                    err_confirm_pass_empty: !details.confirm_password_empty_ver,
+                    err_confirm_pass: !details.confirm_password_ver,
                 }
-            })
+            });
         }
     }
 
@@ -142,8 +144,7 @@ class RegisterForm extends Component {
             last_name: this.state.last_name,
             email: this.state.email,
             password: this.state.password
-        }
-        //console.log(registerData);
+        };
         fetch('http://localhost:8080/api/auth/register', {
             method: 'POST',
             body: JSON.stringify(registerData),
@@ -151,19 +152,18 @@ class RegisterForm extends Component {
                 "Content-type": "application/json; charset=UTF-8",
             }
         }).then(res => {
-            //console.log(res.status);
             if (res.status === 200) {
-                this.props.changeForm()
-                this.props.handleRegistrationSuccess()
+                this.props.changeForm();
+                this.props.handleRegistrationSuccess();
             } else {
-                throw Error(res.status)
+                throw Error(res.status);
             }
         }).catch(error => console.log("Error: " + error))
     }
 
     render() {
-        const { empty_input, password_incorrect, email_incorrect, confirm_password_incorrect } = this.messages
-        const { err_email, err_pass, err_first_name_empty, err_last_name_empty, err_email_empty, err_pass_empty, err_confirm_pass_empty, err_confirm_pass } = this.state.errors
+        const { empty_input, password_incorrect, email_incorrect, confirm_password_incorrect } = this.messages;
+        const { err_email, err_pass, err_first_name_empty, err_last_name_empty, err_email_empty, err_pass_empty, err_confirm_pass_empty, err_confirm_pass } = this.state.errors;
 
         return (
             <div className="modalLog" >

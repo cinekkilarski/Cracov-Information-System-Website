@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import '../styles/Navigation.css'
-import { Navbar, Nav, Dropdown, Button } from 'react-bootstrap'
+import '../styles/Navigation.css';
+import { Navbar, Nav, Dropdown, Button } from 'react-bootstrap';
 import { Person, BoxArrowRight, HouseDoor } from 'react-bootstrap-icons';
 import $ from 'jquery';
-import jwt from 'jwt-decode'
-import Cookies from 'js-cookie'
+import jwt from 'jwt-decode';
+import Cookies from 'js-cookie';
+
+// TODO do this within react; jQuery shouldn't be bundled with apps in 2020.
 $(function () {
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 30) {
@@ -27,10 +29,8 @@ class Navigation extends Component {
     }
 
     componentDidMount() {
-        // console.log(Cookies.get("token"));
         if (this.props.logged && Cookies.get("token")) {
             const decodeToken = jwt(Cookies.get("token"))
-            // console.log(decodeToken);
             this.setState({
                 decodeToken: decodeToken
             })
@@ -38,8 +38,6 @@ class Navigation extends Component {
     }
 
     componentDidUpdate() {
-        // console.log(this.state.decodeToken.exp);
-        // console.log(Date.now().toString().slice(0, 10));
         if (this.state.decodeToken && (Date.now().toString().slice(0, 10) >= this.state.decodeToken.exp)) {
             Cookies.remove("token");
             Cookies.remove("logged");
@@ -48,7 +46,6 @@ class Navigation extends Component {
     }
 
     render() {
-        // console.log(this.state.decodeToken);
         return (
             <div>
                 <div></div>
