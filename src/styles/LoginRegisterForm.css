@@ -1,13 +1,17 @@
-body {font-family: Arial, Helvetica, sans-serif;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-label{
+label {
   color: rgb(226, 199, 173);
   font-size: 20px;
   margin: 0;
   padding-top: 20px;
 }
-/* Full-width input fields */
-input[type=text],input[type=email], input[type=password] {
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -19,9 +23,8 @@ input[type=text],input[type=email], input[type=password] {
   color: #000;
 }
 
-
 .loginbutton {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -29,14 +32,12 @@ input[type=text],input[type=email], input[type=password] {
   cursor: pointer;
   width: 100%;
   border-radius: 10px;
-
 }
 
 .loginbutton:hover {
   opacity: 0.8;
 }
 
-/* Extra styles for the cancel button */
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
@@ -49,15 +50,12 @@ input[type=text],input[type=email], input[type=password] {
   float: right;
   width: auto;
   padding: 10px 30px;
-  background-color:  #367ff4;
+  background-color: #367ff4;
   position: absolute;
   right: 10px;
   bottom: 0px;
- 
-  /* padding-top: 16px; */
 }
 
-/* Center the image and position the close button */
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
@@ -73,38 +71,37 @@ img.avatar {
   padding: 16px;
 }
 
-
-
-/* The Modal (background) */
 .modalLog {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: block;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-   /* Enable scroll if needed */
-  /* background-color: rgb(0,0,0); 
-  /* background-color: rgb(0, 0, 0); */
-  background-image: linear-gradient(to right bottom, #051937, #51295c, #a03361, #da5647, #eb9612);
+  background-image: linear-gradient(
+    to right bottom,
+    #051937,
+    #51295c,
+    #a03361,
+    #da5647,
+    #eb9612
+  );
   padding-top: 60px;
-  z-index:2000;
+  z-index: 2000;
 }
 
-/* Modal Content/Box */
 .modalContentLog {
   background-color: #833434d7;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 2px solid rgb(109, 19, 11);
   border-radius: 10px;
-  width: 25%; /* Could be more or less, depending on screen size */
+  width: 25%;
   transform: translateY(-16%);
   z-index: 2005;
 }
 
-/* The Close Button (x) */
 .close {
   position: absolute;
   right: 25px;
@@ -120,46 +117,35 @@ img.avatar {
   cursor: pointer;
 }
 
-/* Add Zoom Animation */
-/* .animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-   */
 @keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
-/* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
- .psw {
-     display: block;
-     float: none;
+  .psw {
+    display: block;
+    float: none;
   }
   .cancelbtn {
-     width: 100%;
+    width: 100%;
   }
 }
-.containerbotton{
-    background-color:#4d0d0dd5;
-    height: 60px;
+.containerbotton {
+  background-color: #4d0d0dd5;
+  height: 60px;
 }
 
-
-
-.errormessage{
-  background-color:rgb(216, 55, 55);
+.errormessage {
+  background-color: rgb(216, 55, 55);
   width: auto;
-  padding: 5px 20px ;
+  padding: 5px 20px;
   margin: 8px 0;
   display: inline-block;
-  /* border: 1px solid #ccc; */
   box-sizing: border-box;
   right: 0px;
   border-radius: 8px;

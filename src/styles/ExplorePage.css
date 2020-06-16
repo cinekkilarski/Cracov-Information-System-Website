@@ -1,44 +1,40 @@
-.exploreMainDiv{
-    margin-left: 8%;
-    margin-right: 8%;
-    padding: 0px;
-    position: relative; 
+.exploreMainDiv {
+  margin-left: 8%;
+  margin-right: 8%;
+  padding: 0px;
+  position: relative;
 }
 
- .card {
-     height: 600px;
-    width: 500px;
-    float: left;
-    margin: 1%;
-    text-align: justify;
-    position: relative;
-    float: left;    
- }
-
-.cardImage{
-    height: 350px;
+.card {
+  height: 600px;
+  width: 500px;
+  float: left;
+  margin: 1%;
+  text-align: justify;
+  position: relative;
+  float: left;
 }
 
-.exploreButton{
-    width: 200px;
-    background-color: rgb(34, 235, 111);
-    border: none;
-    border-radius: 2px;
-    position: absolute;
-    left: 150px;
-    bottom: 10px;
-    height: 40px;
-    color: white;
-    font-size: 20px;
+.cardImage {
+  height: 350px;
 }
 
-  .exploreButton:hover, .exploreButton:focus {opacity: 0.6;
-    background-color: #555;
-    color: white;}
- 
-/* 
-#inner {
-    display: table;
-    margin: 0 auto;
-   
-  } */
+.exploreButton {
+  width: 200px;
+  background-color: rgb(34, 235, 111);
+  border: none;
+  border-radius: 2px;
+  position: absolute;
+  left: 150px;
+  bottom: 10px;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+}
+
+.exploreButton:hover,
+.exploreButton:focus {
+  opacity: 0.6;
+  background-color: #555;
+  color: white;
+}

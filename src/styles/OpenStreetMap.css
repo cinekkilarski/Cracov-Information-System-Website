@@ -1,31 +1,25 @@
 .leaflet-container {
-   
-    height: 600px;
-    width: 100%;
-    /* margin: 0 auto; */
-    /* border-radius: 10px; */
-    /* margin-right: 50px; */
-    margin-bottom: 0px;
- /* float: right; */
-  }
+  height: 600px;
+  width: 100%;
+  margin-bottom: 0px;
+}
 
-  .custom-style {
-margin-left: 40px;
-transform: translateY(-98px);
-    z-index: 3;
-    width: 300px;
+.custom-style {
+  margin-left: 40px;
+  transform: translateY(-98px);
+  z-index: 3;
+  width: 300px;
+}
 
-  }
+#searchmap input {
+  background-color: rgb(25, 42, 42);
+  width: 20px;
+}
 
-  #searchmap input{
-    background-color: rgb(25, 42, 42);
-    width: 20px;
-  }
-
-  .centerView{
-    font-size: 18px;
-    transform: translateY(-150px);
-    margin-left: 350px;
-    border:1px rgba(128, 128, 128, 0.267) solid;
+.centerView {
+  font-size: 18px;
+  transform: translateY(-150px);
+  margin-left: 350px;
+  border: 1px rgba(128, 128, 128, 0.267) solid;
   background-color: rgb(255, 255, 255);
-  }
+}
